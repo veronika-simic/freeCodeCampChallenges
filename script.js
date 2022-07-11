@@ -11,7 +11,7 @@ caps.forEach(cap => {cap.addEventListener('click', ()=>{
 })})
 
 
-
+/* canvas */
 const canvas = document.querySelector('.canvas');
 let ctx = canvas.getContext('2d');
 let isDrawing = false /* is user drawing */

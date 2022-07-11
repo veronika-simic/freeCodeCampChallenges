@@ -9,7 +9,7 @@ Colored Markers project from freeCodeCamp created with HTML, CSS and JavaScript
 
 
 ## General info
-Colored Markers project is made to develop my skills in DOM manipulation. I got the idea from freeCodeCamp and added my own touch. 
+Colored Markers project is made to develop my skills in DOM manipulation. I got the idea from freeCodeCamp and added my interactivity to markers (open,close). 
 
 ## Technologies
 Project is created with:
