@@ -28,17 +28,15 @@ h1 {
 
 .red {
     background: var(--red-color-gradient);
-    box-shadow: 0 0 20px 0 rgba(83,14,14,0.8);
+    
 }
 
 .green {
     background: var(--green-color-gradient);
-    box-shadow: 0 0 20px 0 #3B7E20CC;
 }
 
 .blue {
     background: var(--blue-color-gradient);
-    box-shadow: 0 0 20px 0 hsla(223,59%,31%,0.8);
 }
 
 .cap {
@@ -62,22 +60,25 @@ h1 {
 .cap.left {
     left: -100px;
 }
-.marker-tip-lrg {
+
+.marker-tip {
+    background-color: black;
+    z-index: 2;
+    position: absolute;
+}
+
+.marker-tip.lrg {
     width: 25px;
     height: 25px;
-    background-color: black;
-    position: absolute;
     left: 40px;
-    z-index: 2;
+    
 }
-.marker-tip-sml {
+.marker-tip.sml {
     width: 20px;
     height: 20px;
     top: 2.5px;
-    position: absolute;
     left: 25px;
-    background-color: black;
-    z-index: 2;
+    
 }
 
 .marker-tip-background {
