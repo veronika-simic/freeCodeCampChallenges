@@ -44,7 +44,7 @@ h1 {
 .cap {
     width: 65px;
     position: absolute;
-    z-index: 2
+    z-index: 3;
   
 }
 .cap-red {
@@ -59,6 +59,9 @@ h1 {
     background: var(--blue-color-gradient);
 }
 
+.cap.left {
+    left: -100px;
+}
 .marker-tip {
     width: 0;
     height: 0;
@@ -68,9 +71,15 @@ h1 {
     transform: rotate(-90deg);
     position: absolute;
     left: 40px;
+    z-index: 2;
+}
+
+.marker-tip-background {
+    width: 65px;
+    height: 25px;
+    position: absolute;
+    background-color: rgba(255,255,255,1);
     z-index: 1;
-
-
 }
 
 .sleeve {
