@@ -17,6 +17,7 @@ h1 {
     width: 200px;
     height: 25px;
     margin: 10px auto;
+    position: relative;
 }
 
 .red {
@@ -36,12 +37,16 @@ h1 {
 
 .cap {
     width: 60px;
+    background-color: purple;
+    position: absolute;
 }
 
 .sleeve {
     width: 110px;
     background-color: rgba(255,255,255,0.5);
     border-left: 10px double rgba(0,0,0,0.75);
+    position: absolute;
+    left: 65px;
 }
 
 .cap, .sleeve {

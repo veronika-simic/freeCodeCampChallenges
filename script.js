@@ -1,7 +1,7 @@
-const cap = document.querySelector('.cap');
-console.log(cap)
-function moveCap(){
-    cap.style.backgroundColor = 'blue';
-}
+const caps = document.querySelectorAll('.cap');
+console.log(caps);
 
-cap.addEventListener("click", moveCap)
+caps.forEach(cap => {cap.addEventListener('click', ()=>{
+    cap.style.left = '-100px';
+})})
+
