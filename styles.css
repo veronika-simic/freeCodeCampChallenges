@@ -62,15 +62,21 @@ h1 {
 .cap.left {
     left: -100px;
 }
-.marker-tip {
-    width: 0;
-    height: 0;
-    border: 12.5px solid transparent;
-    border-top: 0;
-    border-bottom: 25px solid black;
-    transform: rotate(-90deg);
+.marker-tip-lrg {
+    width: 25px;
+    height: 25px;
+    background-color: black;
     position: absolute;
     left: 40px;
+    z-index: 2;
+}
+.marker-tip-sml {
+    width: 20px;
+    height: 20px;
+    top: 2.5px;
+    position: absolute;
+    left: 25px;
+    background-color: black;
     z-index: 2;
 }
 
