@@ -12,3 +12,9 @@ caps.forEach(cap => {cap.addEventListener('click', ()=>{
 
 
 
+const canvas = document.querySelector('.canvas');
+let ctx = canvas.getContext('2d');
+let isDrawing = false /* is user drawing */
+let lineWidth = 5; /* line width 5px */
+let startX;
+let startY;
