@@ -1,3 +1,9 @@
+:root {
+    --red-color-gradient: linear-gradient(rgb(122,74,14), rgb(245,62,113), rgb(162,27,27));
+    --green-color-gradient: linear-gradient(#55680D, #71F53E, #116C31);
+    --blue-color-gradient: linear-gradient(hsl(186, 76%, 16%), hsl(223,90%, 60%), hsl(240,56%,42%));
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -21,28 +27,50 @@ h1 {
 }
 
 .red {
-    background: linear-gradient(rgb(122,74,14), rgb(245,62,113), rgb(162,27,27));
+    background: var(--red-color-gradient);
     box-shadow: 0 0 20px 0 rgba(83,14,14,0.8);
 }
 
 .green {
-    background: linear-gradient(#55680D, #71F53E, #116C31);
+    background: var(--green-color-gradient);
     box-shadow: 0 0 20px 0 #3B7E20CC;
 }
 
 .blue {
-    background: linear-gradient(hsl(186, 76%, 16%), hsl(223,90%, 60%), hsl(240,56%,42%));
+    background: var(--blue-color-gradient);
     box-shadow: 0 0 20px 0 hsla(223,59%,31%,0.8);
 }
 
 .cap {
-    width: 60px;
-    background-color: purple;
+    width: 65px;
     position: absolute;
+    z-index: 2
+  
+}
+.cap-red {
+    background: var(--red-color-gradient)
 }
 
-.tip {
-    
+.cap-green {
+    background: var(--green-color-gradient);
+}
+
+.cap-blue {
+    background: var(--blue-color-gradient);
+}
+
+.marker-tip {
+    width: 0;
+    height: 0;
+    border: 12.5px solid transparent;
+    border-top: 0;
+    border-bottom: 25px solid black;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 40px;
+    z-index: 1;
+
+
 }
 
 .sleeve {
