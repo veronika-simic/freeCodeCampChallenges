@@ -111,3 +111,15 @@ h1 {
     margin: 0 auto;
 }
 
+#toolbar {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#toolbar * {
+    margin-bottom: 6px;
+}
+
+
+
