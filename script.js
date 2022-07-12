@@ -12,23 +12,27 @@ markers.forEach(marker => {marker.addEventListener('click', ()=>{
 const stroke = document.getElementById('stroke')
 
 /* change color of stroke based on marker color */
-markers.forEach(marker => {marker.addEventListener('click', ()=> {
-    if (marker.classList.contains('red') && marker.firstElementChild.classList.contains('left')){
-        ctx.strokeStyle = 'red';
-        stroke.style.backgroundColor = 'red';
 
-    } else if (marker.classList.contains('green') && marker.firstElementChild.classList.contains('left')){
-        ctx.strokeStyle = 'green';
-        stroke.style.backgroundColor = 'green';
-    } else if (marker.classList.contains('blue') && marker.firstElementChild.classList.contains('left'))  {
-        ctx.strokeStyle = 'blue';
-        stroke.style.backgroundColor = 'blue';
-    } else {
-        ctx.strokeStyle = 'black';
-        stroke.style.backgroundColor = 'black'
-    }
-})})
-
+for (let i = 0; i < markers.length; i++){
+    markers[i].addEventListener('click', ()=> {
+        if (markers[i].firstElementChild.classList.contains('left')) {
+            if (markers[i].classList.contains('red')){
+                ctx.strokeStyle = 'red';
+                stroke.style.backgroundColor = 'red'; 
+            } else if (markers[i].classList.contains('green')){
+                ctx.strokeStyle = 'green';
+                stroke.style.backgroundColor = 'green';
+            } else if (markers[i].classList.contains('blue')) {
+                ctx.strokeStyle = 'blue';
+                stroke.style.backgroundColor = 'blue';
+            } else {
+                ctx.strokeStyle = 'black';
+                stroke.style.backgroundColor = 'black'
+            }
+        }
+        
+    })
+}
 
 /* canvas */
 const canvas = document.getElementById('drawing-board');
