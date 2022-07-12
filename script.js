@@ -12,7 +12,8 @@ caps.forEach(cap => {cap.addEventListener('click', ()=>{
 
 
 /* canvas */
-const canvas = document.querySelector('canvas');
+const canvas = document.getElementById('drawing-board');
+const toolbar = document.getElementById('toolbar');
 const ctx = canvas.getContext('2d');
 const canvasOffsetX = canvas.offsetLeft; /* distance from the left */
 const canvasOffsetY = canvas.offsetTop;  /* distance from top */
@@ -23,6 +24,17 @@ let isDrawing = false /* is user drawing */
 let lineWidth = 5; /* line width 5px */
 let startX;
 let startY;
+
+/* toolbar */
+
+/* when user clicks clear button */
+toolbar.addEventListener('click', (e) => {
+    if(e.target.id === 'clear'){
+        ctx.clearRect(0,0, canvas.width, canvas.height)
+    }
+})
+
+s
 
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
