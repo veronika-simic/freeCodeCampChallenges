@@ -26,6 +26,7 @@ caps.forEach(cap => {cap.addEventListener('click', ()=> {
         stroke.style.backgroundColor = 'blue';
     } else {
         ctx.strokeStyle = 'black';
+        stroke.style.backgroundColor = 'black'
     }
 })})
 
