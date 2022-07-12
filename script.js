@@ -34,7 +34,12 @@ toolbar.addEventListener('click', (e) => {
     }
 })
 
-s
+/* change color of input */
+toolbar.addEventListener('change', (e) => {
+    if (e.target.id === 'stroke') {
+        ctx.strokeStyle = e.target.value;
+    }
+})
 
 canvas.addEventListener('mousedown', (e) => {
     isDrawing = true;
