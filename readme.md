@@ -19,7 +19,7 @@ Project is created with:
 * JavaScript 1.7
 
 ## Setup
-Clicking the marker changes the color of stroke and user can draw on the board. Board is made by using HTML canvas element. Only one marker can be opened
+Clicking the marker changes the color of stroke and user can draw on the board. Board is made by using HTML canvas element. Only one marker can be opened. Live version of project can be seen [here](#https://veronika-simic.github.io/freeCodeCampChallenges-markers/)
 
 ## Status
 Finished
