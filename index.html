@@ -32,9 +32,20 @@
                 <div class="marker-tip-background"></div>
                 <div class="sleeve"></div>
             </div>
-            <div class="canvas">
-                <canvas id="drawing-board"></canvas>
+            <div class="drawing-board-container">
+                <div id="toolbar">
+                    <h1>Draw</h1>
+                    <label for="stroke">Stroke</label>
+                    <input id="stroke" name="stroke" type="color">
+                    <label for="line-width">Line width</label>
+                    <input id="line-width" name="line-width" type="number" value="5">
+                    <button id="clear">Clear</button>
+                </div>
+                <div class="canvas">
+                    <canvas id="drawing-board"></canvas>
+                </div>
             </div>
+            
         </div>
     </body>
 </html>

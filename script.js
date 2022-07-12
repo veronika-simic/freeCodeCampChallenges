@@ -29,3 +29,20 @@ canvas.addEventListener('mousedown', (e) => {
     startX = e.clientX;
     startY = e.clientY;
 });
+
+canvas.addEventListener('mouseup', (e)=> {
+    isDrawing = false;
+    ctx.stroke(); /* draws the path */
+    ctx.beginPath();
+})
+
+canvas.addEventListener('mousemove', draw);
+const draw = (e) => {
+    if (!isDrawing){
+        return;
+    }
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = 'round';
+    ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
+    ctx.stroke();
+}
