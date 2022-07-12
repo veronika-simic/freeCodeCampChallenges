@@ -23,3 +23,9 @@ let isDrawing = false /* is user drawing */
 let lineWidth = 5; /* line width 5px */
 let startX;
 let startY;
+
+canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+});
