@@ -121,5 +121,15 @@ h1 {
     margin-bottom: 6px;
 }
 
+#toolbar input {
+    width: 100%;
+}
 
+#toolbar button {
+    border: none;
+    background-color:  #116C31;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
 
