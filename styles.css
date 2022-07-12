@@ -107,6 +107,7 @@ h1 {
 
 .drawing-board-container {
     border: 2px solid black;
+    cursor: crosshair;
     height: 70%;
     width: 80%;
     display: flex;

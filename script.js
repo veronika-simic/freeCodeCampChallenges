@@ -1,11 +1,10 @@
-const caps = document.querySelectorAll('.cap');
-console.log(caps);
-
-caps.forEach(cap => {cap.addEventListener('click', ()=>{
-    if (cap.classList.contains('left')){
-        cap.classList.remove('left');
+const markers = document.querySelectorAll('.marker');
+console.log(markers);
+markers.forEach(marker => {marker.addEventListener('click', ()=>{
+    if (marker.firstElementChild.classList.contains('left')){
+        marker.firstElementChild.classList.remove('left');
     } else {
-        cap.classList.add('left');
+        marker.firstElementChild.classList.add('left');
     }
    
 })})
@@ -13,15 +12,15 @@ caps.forEach(cap => {cap.addEventListener('click', ()=>{
 const stroke = document.getElementById('stroke')
 
 /* change color of stroke based on marker color */
-caps.forEach(cap => {cap.addEventListener('click', ()=> {
-    if (cap.classList.contains('cap-red') && cap.classList.contains('left')){
+markers.forEach(marker => {marker.addEventListener('click', ()=> {
+    if (marker.classList.contains('red') && marker.firstElementChild.classList.contains('left')){
         ctx.strokeStyle = 'red';
         stroke.style.backgroundColor = 'red';
 
-    } else if (cap.classList.contains('cap-green') && cap.classList.contains('left')){
+    } else if (marker.classList.contains('green') && marker.firstElementChild.classList.contains('left')){
         ctx.strokeStyle = 'green';
         stroke.style.backgroundColor = 'green';
-    } else if (cap.classList.contains('cap-blue') && cap.classList.contains('left'))  {
+    } else if (marker.classList.contains('blue') && marker.firstElementChild.classList.contains('left'))  {
         ctx.strokeStyle = 'blue';
         stroke.style.backgroundColor = 'blue';
     } else {
@@ -53,8 +52,6 @@ toolbar.addEventListener('click', (e) => {
         ctx.clearRect(0,0, canvas.width, canvas.height)
     }
 })
-
-
 
 /* change color of input */
 toolbar.addEventListener('change', (e) => {
