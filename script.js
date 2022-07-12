@@ -1,10 +1,10 @@
 const markers = document.querySelectorAll('.marker');
 console.log(markers);
 markers.forEach(marker => {marker.addEventListener('click', ()=>{
-    if (marker.firstElementChild.classList.contains('left')){
-        marker.firstElementChild.classList.remove('left');
+    if (marker.firstElementChild.classList.contains('open')){
+        marker.firstElementChild.classList.remove('open');
     } else {
-        marker.firstElementChild.classList.add('left');
+        marker.firstElementChild.classList.add('open');
     }
    
 })})
@@ -14,23 +14,31 @@ const stroke = document.getElementById('stroke')
 /* change color of stroke based on marker color */
 
 for (let i = 0; i < markers.length; i++){
-    markers[i].addEventListener('click', ()=> {
-        if (markers[i].firstElementChild.classList.contains('left')) {
+    markers[i].addEventListener('click', () => {
+        if (markers[i].firstElementChild.classList.contains('open')) {
             if (markers[i].classList.contains('red')){
                 ctx.strokeStyle = 'red';
-                stroke.style.backgroundColor = 'red'; 
+                stroke.style.backgroundColor = 'red';
+                markers[i+1].firstElementChild.classList.remove('open');
+                markers[i+2].firstElementChild.classList.remove('open');
             } else if (markers[i].classList.contains('green')){
                 ctx.strokeStyle = 'green';
                 stroke.style.backgroundColor = 'green';
-            } else if (markers[i].classList.contains('blue')) {
+                markers[i-1].firstElementChild.classList.remove('open');
+                markers[i+1].firstElementChild.classList.remove('open');
+
+            } else {
                 ctx.strokeStyle = 'blue';
                 stroke.style.backgroundColor = 'blue';
-            } else {
-                ctx.strokeStyle = 'black';
-                stroke.style.backgroundColor = 'black'
+                markers[i-1].firstElementChild.classList.remove('open');
+                markers[i-2].firstElementChild.classList.remove('open');
+
+
             }
-        }
-        
+        } else {
+            ctx.strokeStyle = 'black';
+            stroke.style.backgroundColor = 'black'
+        } 
     })
 }
 

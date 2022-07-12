@@ -19,9 +19,9 @@ Project is created with:
 * JavaScript 1.7
 
 ## Setup
-Clicking the marker changes the color  of stroke and user can draw on the board. Board is made by using HTML canvas element.
+Clicking the marker changes the color of stroke and user can draw on the board. Board is made by using HTML canvas element. Only one marker can be opened
 
 ## Status
-Currently in development
-s
+Finished
+
 

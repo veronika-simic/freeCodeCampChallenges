@@ -58,7 +58,7 @@ h1 {
     background: var(--blue-color-gradient);
 }
 
-.cap.left {
+.cap.open {
     left: -100px;
 }
 
