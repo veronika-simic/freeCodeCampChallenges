@@ -119,6 +119,7 @@ h1 {
     display: flex;
     flex-direction: column;
     padding: 15px;
+    width: 25%;
 }
 
 #toolbar * {
@@ -127,6 +128,12 @@ h1 {
 
 #toolbar input {
     width: 100%;
+
+}
+
+#stroke {
+   background-color: black;
+   
 }
 
 #toolbar button {

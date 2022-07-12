@@ -10,13 +10,20 @@ caps.forEach(cap => {cap.addEventListener('click', ()=>{
    
 })})
 
+const stroke = document.getElementById('stroke')
+
+/* change color of stroke based on marker color */
 caps.forEach(cap => {cap.addEventListener('click', ()=> {
     if (cap.classList.contains('cap-red') && cap.classList.contains('left')){
         ctx.strokeStyle = 'red';
+        stroke.style.backgroundColor = 'red';
+
     } else if (cap.classList.contains('cap-green') && cap.classList.contains('left')){
         ctx.strokeStyle = 'green';
+        stroke.style.backgroundColor = 'green';
     } else if (cap.classList.contains('cap-blue') && cap.classList.contains('left'))  {
         ctx.strokeStyle = 'blue';
+        stroke.style.backgroundColor = 'blue';
     } else {
         ctx.strokeStyle = 'black';
     }
