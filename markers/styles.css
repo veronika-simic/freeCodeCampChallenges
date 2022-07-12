@@ -1,0 +1,148 @@
+:root {
+    --red-color-gradient: linear-gradient(rgb(122,74,14), rgb(245,62,113), rgb(162,27,27));
+    --green-color-gradient: linear-gradient(#55680D, #71F53E, #116C31);
+    --blue-color-gradient: linear-gradient(hsl(186, 76%, 16%), hsl(223,90%, 60%), hsl(240,56%,42%));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(255,255,255);
+    padding: 10px 0;
+}
+
+.marker {
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.red {
+    background: var(--red-color-gradient);
+    
+}
+
+.green {
+    background: var(--green-color-gradient);
+}
+
+.blue {
+    background: var(--blue-color-gradient);
+}
+
+.cap {
+    width: 65px;
+    position: absolute;
+    z-index: 3;
+  
+}
+.cap-red {
+    background: var(--red-color-gradient)
+}
+
+.cap-green {
+    background: var(--green-color-gradient);
+}
+
+.cap-blue {
+    background: var(--blue-color-gradient);
+}
+
+.cap.open {
+    left: -100px;
+}
+
+.marker-tip {
+    background-color: black;
+    z-index: 2;
+    position: absolute;
+}
+
+.marker-tip.lrg {
+    width: 25px;
+    height: 25px;
+    left: 40px;
+    
+}
+.marker-tip.sml {
+    width: 20px;
+    height: 20px;
+    top: 2.5px;
+    left: 25px;
+    
+}
+
+.marker-tip-background {
+    width: 65px;
+    height: 25px;
+    position: absolute;
+    background-color: rgba(255,255,255,1);
+    z-index: 1;
+}
+
+.sleeve {
+    width: 110px;
+    background-color: rgba(255,255,255,0.5);
+    border-left: 10px double rgba(0,0,0,0.75);
+    position: absolute;
+    left: 65px;
+}
+
+.cap, .sleeve {
+    display: inline-block;
+    height: 25px;
+}
+
+/* canvas */
+
+.drawing-board-container {
+    border: 2px solid black;
+    cursor: crosshair;
+    height: auto;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    
+
+}
+
+#toolbar {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 25%;
+}
+
+#toolbar * {
+    margin-bottom: 6px;
+}
+
+#toolbar input {
+    width: 100%;
+
+}
+
+#stroke {
+   background-color: black;
+   
+}
+
+#toolbar button {
+    border: none;
+    background-color:  #116C31;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+
