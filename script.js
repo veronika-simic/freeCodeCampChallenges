@@ -10,6 +10,18 @@ caps.forEach(cap => {cap.addEventListener('click', ()=>{
    
 })})
 
+caps.forEach(cap => {cap.addEventListener('click', ()=> {
+    if (cap.classList.contains('cap-red') && cap.classList.contains('left')){
+        ctx.strokeStyle = 'red';
+    } else if (cap.classList.contains('cap-green') && cap.classList.contains('left')){
+        ctx.strokeStyle = 'green';
+    } else if (cap.classList.contains('cap-blue') && cap.classList.contains('left'))  {
+        ctx.strokeStyle = 'blue';
+    } else {
+        ctx.strokeStyle = 'black';
+    }
+})})
+
 
 /* canvas */
 const canvas = document.getElementById('drawing-board');
@@ -24,8 +36,8 @@ let isDrawing = false /* is user drawing */
 let lineWidth = 5; /* line width 5px */
 let startX;
 let startY;
-
 /* toolbar */
+
 
 /* when user clicks clear button */
 toolbar.addEventListener('click', (e) => {
@@ -34,26 +46,16 @@ toolbar.addEventListener('click', (e) => {
     }
 })
 
+
+
 /* change color of input */
 toolbar.addEventListener('change', (e) => {
-    if (e.target.id === 'stroke') {
-        ctx.strokeStyle = e.target.value;
+    /* change width of line */
+    if (e.target.id === 'lineWidth'){
+        lineWidth = e.target.value;
     }
 })
 
-canvas.addEventListener('mousedown', (e) => {
-    isDrawing = true;
-    startX = e.clientX;
-    startY = e.clientY;
-});
-
-canvas.addEventListener('mouseup', (e)=> {
-    isDrawing = false;
-    ctx.stroke(); /* draws the path */
-    ctx.beginPath();
-})
-
-canvas.addEventListener('mousemove', draw);
 const draw = (e) => {
     if (!isDrawing){
         return;
@@ -63,3 +65,17 @@ const draw = (e) => {
     ctx.lineTo(e.clientX - canvasOffsetX, e.clientY);
     ctx.stroke();
 }
+
+canvas.addEventListener('mousedown', (e) => {
+    isDrawing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+});
+
+canvas.addEventListener('mouseup', (e) => {
+    isDrawing = false;
+    ctx.stroke(); /* draws the path */
+    ctx.beginPath();
+})
+
+canvas.addEventListener('mousemove', draw);

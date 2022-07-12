@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
@@ -105,13 +106,16 @@ h1 {
 /* canvas */
 
 .drawing-board-container {
-    height: 80%;
+    border: 2px solid black;
+    height: 70%;
     width: 80%;
     display: flex;
     margin: 0 auto;
+
 }
 
 #toolbar {
+    background-color: wheat;
     display: flex;
     flex-direction: column;
     padding: 15px;
